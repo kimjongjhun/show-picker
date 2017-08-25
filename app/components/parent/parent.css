@@ -1,0 +1,22 @@
+parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "show season episode" ". button .";
+    justify-content: stretch;
+}
+
+show {
+    grid-area: show;
+}
+
+season {
+    grid-area: season;
+}
+
+episode {
+    grid-area: episode;
+}
+
+.button {
+    grid-area: button;
+}
