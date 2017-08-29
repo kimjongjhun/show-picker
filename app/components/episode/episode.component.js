@@ -14,7 +14,7 @@ function EpisodeController () {
 
     var episodeNumber;
 
-    function $onChanges() {
-        episodeNumber = this.number;
+    function $onChanges(changes) {
+        this.episodeNumber = changes.number.currentValue.episode;
     }
 }

@@ -12,9 +12,9 @@ function SeasonController() {
         $onChanges: $onChanges
     });
 
-    var seasonNumber;
+    this.seasonNumber;
 
-    function $onChanges() {
-        seasonNumber = this.number;
+    function $onChanges(changes) {
+        this.seasonNumber = changes.number.currentValue.season;
     }
 }

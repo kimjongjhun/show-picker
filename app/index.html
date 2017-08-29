@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Show Picker</title>
-    <link rel="stylesheet" href="/show-picker/assets/libs/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"/>
     <link rel="stylesheet" href="./components/parent/parent.css"/>
 </head>
 <body>
 
 <div class="container">
-    <parent></parent>
+    <div class="panel panel-default text-center">
+        <div class="panel-heading">
+            <h4>Random Show Picker</h4>
+        </div>
+        <div class="panel-body">
+            <parent></parent>
+        </div>
+    </div>
 </div>
 
-<script src="/show-picker/assets/libs/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.js"></script>
 <script src="./app.js"></script>
 <script src="./components/parent/parent.component.js"></script>
 <script src="./components/show/show.component.js"></script>

@@ -1,26 +1,22 @@
 angular.module('app.show', [])
     .component('show', {
+        controller: [ShowController],
         bindings: {
             title: '<'
         },
-        controller: [ShowController],
         templateUrl: 'components/show/show.html'
     });
 
 function ShowController () {
     angular.extend(this, {
-        $onChanges: $onChanges,
-        $onInit: $onInit
+        $onChanges: $onChanges
     });
 
-    var showTitle;
-
-    function $onInit() {
-        showTitle = 'Yet to be determined ... '
-    }
+    this.title = 'TBD';
 
     function $onChanges(changes) {
-        this.title = changes.title;
+        this.title = changes.title.currentValue.name;
+        console.log('here', this.title);
     }
 
 

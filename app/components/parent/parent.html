@@ -2,11 +2,7 @@
     <button class="btn btn-default btn-lg" type="button" ng-click="$ctrl.randomize()">Randomize</button>
 </div>
 
-<div>
-    {{$ctrl.show}}
-</div>
-
 <show title="$ctrl.show"></show>
-<season number=""></season>
-<episode number=""></episode>
+<season number="$ctrl.show"></season>
+<episode number="$ctrl.show"></episode>
 
