@@ -7,7 +7,8 @@ angular
 
 function ParentController() {
     angular.extend(this, {
-        randomize: randomize
+        randomize: randomize,
+        testFunction: testFunction
     });
 
     var showList = [
@@ -46,12 +47,19 @@ function ParentController() {
         'episode': 'BUTTON'
     };
 
+    this.test = 'just testing';
+
     function randomize() {
         var pick = Math.floor(Math.random() * showList.length);
         this.show.name = showList[pick].title;
         this.show.season = Math.floor(Math.random() * showList[pick].season.length + 1);
         this.show.episode = Math.floor(Math.random() * showList[pick].episode[this.show.season - 1] + 1);
         console.log(this.show);
+    }
+
+    function testFunction(input) {
+        this.test = input;
+        console.log(input);
     }
 
 

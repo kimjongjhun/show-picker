@@ -15,8 +15,10 @@ function ShowController () {
     this.title = 'TBD';
 
     function $onChanges(changes) {
-        this.title = changes.title.currentValue.name;
-        console.log('here', this.title);
+        // this.title = changes.title.currentValue.name;
+        // console.log('here', this.title);
+        this.title = changes.title.currentValue;
+        console.log('showing changes, ', changes);
     }
 
 
