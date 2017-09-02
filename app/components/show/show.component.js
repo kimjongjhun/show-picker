@@ -16,7 +16,6 @@ function ShowController () {
 
     function $onChanges(changes) {
         this.title = changes.title.currentValue.name;
-        console.log('here', this.title);
     }
 
 

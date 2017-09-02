@@ -52,6 +52,8 @@ function ParentController(tvdbService) {
 
     this.show = {
         'name': 'PRESS',
+        'id': 'tbd',
+        'description': 'tbd',
         'season': 'THE',
         'episode': 'BUTTON'
     };
@@ -60,10 +62,11 @@ function ParentController(tvdbService) {
         var pick = Math.floor(Math.random() * showList.length);
         var show = {};
         show.name = showList[pick].title;
+        show.id = showList[pick].id;
         show.season = Math.floor(Math.random() * showList[pick].season.length + 1);
         show.episode = Math.floor(Math.random() * showList[pick].episode[show.season - 1] + 1);
 
-        tvdbService.getDescription(show.season, show.episode);
+        tvdbService.getDescription(show.id, show.season, show.episode);
         this.show = show;
         console.log(this.show);
 
